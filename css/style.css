@@ -1,0 +1,115 @@
+/* Root CSS reset of margin/padding */
+
+*
+{
+    margin: 0;
+    /*margin-left: 5px;
+    margin-right: 5px;
+    padding: 10;*/
+    
+}
+
+:root {
+    --hue: 171;
+    --maincolor: 44%,81%;
+    --lightmain: 44%,95%;
+    --mediumlm: 44%,85%;
+    --mediumdm: 44%,31%;
+    --darkmain: 40%,11%;
+    --contrast: hsl(calc(var(--hue) + 180), var(--mediumdm))
+}
+
+/* Main styling */
+
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: hsl(var(--hue), var(--lightmain));
+    color: hsl(var(--hue), var(--darkmain));
+}
+
+/* Header styling */
+
+header
+{
+    height: 100px;
+    background-color: var(--contrast);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 100;
+    display: flex;
+    /* margin-top: 17px; */
+    justify-content: space-between;
+}
+
+header h1
+{
+    color: hsl(var(--hue), var(--mediumlm));
+}
+
+/* Nav/footer styling */
+
+nav, footer
+{
+    background-color: hsl(var(--hue), var(--darkmain));
+    /* height: 40px; */
+    color: hsl(var(--hue), var(--lightmain));
+    /* line-height: 0px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li a
+{
+    
+    border-right: 2px solid hsl(var(--hue), var(--lightmain));
+    color: inherit;
+    text-decoration: none;
+    padding-right: 10px;    
+}
+
+ul
+{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 34px;
+}
+
+li
+{
+    display: inline;
+}
+
+nav img
+{
+    height: 40px;
+}
+
+/* Content area styling */
+
+main
+{
+    margin: 50px 30px;
+    display: flex;
+}
+
+h2, p
+{
+    margin-bottom: 20px;
+}
+
+footer p
+{
+    margin-bottom: 0;
+    display: flex;
+}
+
+footer 
+{
+    display: flex;
+    justify-content: center;
+}
